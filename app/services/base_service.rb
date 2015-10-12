@@ -1,0 +1,2 @@
+class BaseServise
+end
