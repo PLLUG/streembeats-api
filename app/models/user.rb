@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
+  validates :email, precense: true
+  validates :email, uniqueness: true
+  validates :email, { with: /\A[^@\s]+@([^@.\s]+\.)*[^@.\s]+\z/ }
 
-  def full_name
-    ""
-  end
+  validates :username, uniqueness: true
+  validates :username, precense: true
 end
