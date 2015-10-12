@@ -1,2 +1,2 @@
-class BaseServise
+class BaseService
 end
