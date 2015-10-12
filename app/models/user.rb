@@ -7,4 +7,12 @@ class User < ActiveRecord::Base
 
   validates :username, uniqueness: true
   validates :username, precense: true
+
+  def password=(password)
+    @password = password
+  end
+
+  def full_name
+    "#{@first_name} #{@last_name}"
+  end
 end
