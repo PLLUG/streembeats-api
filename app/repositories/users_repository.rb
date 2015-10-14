@@ -6,4 +6,8 @@ class UsersRepository
   def self.find_by_id(id)
     User.find_by_id(id)
   end
+
+  def self.find_by_email(email)
+    User.find_by_email(email).first
+  end
 end
