@@ -18,15 +18,4 @@ class User < ActiveRecord::Base
   def full_name
     "#{first_name} #{last_name}"
   end
-
-  rails_admin do
-    configure :user do
-      field :username
-      field :email
-      field :first_name
-      field :last_name
-      field :created_at
-      field :updated_at
-    end
-  end
 end
