@@ -9,4 +9,9 @@ class TokenService
     @user.save!
     @token
   end
+
+  def clear
+    @user.token = nil
+    @user.save!
+  end
 end
