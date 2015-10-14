@@ -5,6 +5,5 @@ class UserAuthenticator
 
   def authenticate(password)
     return false unless @user
-    end
   end
 end
