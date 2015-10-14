@@ -6,7 +6,7 @@ class UserAuthenticator
   def authenticate(password)
     return false unless @user
 
-    if Bcrypt::Password.new(@user.password_digest) == password
+    if user.authenticate(password)
       @user
     else
       false
