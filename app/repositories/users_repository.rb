@@ -8,6 +8,6 @@ class UsersRepository
   end
 
   def self.find_by_email(email)
-    User.find_by_email(email).first
+    User.find_by_email(email)
   end
 end

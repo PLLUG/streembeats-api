@@ -1,3 +1,5 @@
+require 'bcrypt'
+
 class UserAuthenticator
   def initialize(user)
     @user = user
@@ -5,8 +7,8 @@ class UserAuthenticator
 
   def authenticate(password)
     return false unless @user
-
-    if user.authenticate(password)
+    hashed_password = BCrypt::Password.new(password)
+    if @user.authenticate(hashed_password)
       @user
     else
       false
