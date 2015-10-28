@@ -4,5 +4,6 @@ class Api::V1::BaseController < ApplicationController
   before_action :authorize
 
   def authorize
+    p headers
   end
 end

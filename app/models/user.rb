@@ -13,8 +13,6 @@ class User < ActiveRecord::Base
   validates :first_name, length: { maximum: 255 }
   validates :last_name, length: { maximum: 255 }
 
-  has_secure_password
-
   def full_name
     "#{first_name} #{last_name}"
   end
