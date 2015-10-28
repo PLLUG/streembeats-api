@@ -4,6 +4,8 @@ class Api::V1::BaseController < ApplicationController
   before_action :authorize
 
   def authorize
-    p headers
+    p headers['Authorization']
+    @current_user = UsersRepository.find_by_token(headers['Authorization'])
+    p @current_user
   end
 end

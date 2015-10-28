@@ -4,14 +4,14 @@ class UsersRepository
   end
 
   def self.find_by_id(id)
-    User.find_by_id(id)
+    User.where(id: id).first
   end
 
   def self.find_by_email(email)
-    User.find_by_email(email)
+    User.where(email: email).first
   end
 
   def self.find_by_token(token)
-    User.find_by_token(token)
+    @user = User.where(token: token).first
   end
 end
