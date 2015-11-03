@@ -52,7 +52,6 @@ class GenreTest < ActiveSupport::TestCase
     end
     genre.save
     messages = genre.errors.messages
-    p messages
     assert messages[:wikipedia_link].any?
   end
 end
