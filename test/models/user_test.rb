@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
-
   test "should uniqueness email and username" do
     user = User.new do |u|
       u.username = 'username'
@@ -50,5 +49,4 @@ class UserTest < ActiveSupport::TestCase
 
     assert messages[:email].any?
   end
-
 end
