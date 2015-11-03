@@ -16,8 +16,8 @@ class UserTest < ActiveSupport::TestCase
     user_duplicated.save
     messages = user_duplicated.errors.messages
 
-    assert_not_nil messages[:email]
-    assert_not_nil messages[:username]
+    assert messages[:email].any?
+    assert messages[:username].any?
   end
 
   test "should username and email not empty" do
@@ -25,8 +25,8 @@ class UserTest < ActiveSupport::TestCase
     user.save
     messages = user.errors.messages
 
-    assert_not_nil messages[:username]
-    assert_not_nil messages[:email]
+    assert messages[:username].any?
+    assert messages[:email].any?
   end
 
   test "should create user" do
@@ -48,7 +48,7 @@ class UserTest < ActiveSupport::TestCase
     user.save
     messages = user.errors.messages
 
-    assert_not_nil messages[:email]
+    assert messages[:email].any?
   end
 
 end
