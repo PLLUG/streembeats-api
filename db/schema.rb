@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151101184053) do
+ActiveRecord::Schema.define(version: 20151103174455) do
+
+  create_table "genres", force: :cascade do |t|
+    t.string   "title"
+    t.string   "description"
+    t.string   "wikipedia_link"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
 
   create_table "playlists", force: :cascade do |t|
     t.integer  "user_id"
