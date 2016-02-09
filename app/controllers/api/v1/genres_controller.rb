@@ -1,7 +1,10 @@
+require 'resque'
+
 class Api::V1::GenresController < ApplicationController
 
   def index
     @genres = GenresRepository.all
+    # Resque.enqueue(TestJob)
     render json: @genres
   end
 
