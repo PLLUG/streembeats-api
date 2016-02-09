@@ -32,6 +32,10 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'rails_admin'
 
+gem 'resque'
+
+gem 'mono_logger'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
